@@ -1,5 +1,8 @@
 <a-scene>
 
+  <!-- CAMERA (FORCED, SO NOTHING CAN DISAPPEAR) -->
+  <a-camera position="0 1.6 0"></a-camera>
+
   <!-- SPINNING GROUP -->
   <a-entity
     position="0 1 -4"
@@ -19,14 +22,16 @@
       height="0.6"
       color="#1E90FF"
       position="1.2 0 0">
-  </a-cylinder>
+    </a-cylinder>
 
   </a-entity>
 
-  <!-- STATIC CUBE -->
+  <!-- STATIC CUBE (FIXED ATTRIBUTES) -->
   <a-box
     position="-2 0.5 -3"
-    size="1 1 1"
+    width="1"
+    height="1"
+    depth="1"
     color="#4CC3D9">
   </a-box>
 
