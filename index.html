@@ -1,55 +1,127 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>A-Frame Forced Visibility</title>
-    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
-  </head>
+<a-scene background="color: #0A0A0A">
 
-  <body>
-    <a-scene background="color: #B0B0B0">
+  <!-- CAMERA -->
+  <a-entity
+    camera
+    position="0 6 12"
+    rotation="-25 0 0"
+    look-controls="enabled: false">
+  </a-entity>
 
-      <!-- CAMERA (FORCED) -->
-      <a-entity
-        camera
-        position="0 1.6 5"
-        look-controls>
-      </a-entity>
+  <!-- LIGHTS -->
+  <a-light type="ambient" intensity="0.3"></a-light>
+  <a-light type="point" intensity="2" position="0 3 0"></a-light>
 
-      <!-- LIGHT (FORCED) -->
-      <a-light type="ambient" intensity="1"></a-light>
-      <a-light type="directional" position="1 3 2"></a-light>
+  <!-- SUN -->
+  <a-sphere
+    position="0 1 0"
+    radius="1.2"
+    color="#FDB813"
+    animation="property: rotation; to: 0 360 0; loop: true; dur: 20000">
+  </a-sphere>
 
-      <!-- SPINNING GROUP -->
-      <a-entity
-        position="0 1 -3"
-        animation="property: rotation; to: 0 360 0; loop: true; dur: 3000">
+  <!-- MERCURY -->
+  <a-entity
+    position="0 1 0"
+    animation="property: rotation; to: 0 360 0; loop: true; dur: 4000">
 
-        <a-cone
-          radius-bottom="0.5"
-          height="1"
-          color="#FF8C00"
-          position="0 0 0">
-        </a-cone>
+    <a-sphere
+      position="2 0 0"
+      radius="0.15"
+      color="#A9A9A9">
+    </a-sphere>
 
-        <a-cylinder
-          radius="0.15"
-          height="0.6"
-          color="#1E90FF"
-          position="1.2 0 0">
-        </a-cylinder>
+  </a-entity>
 
-      </a-entity>
+  <!-- VENUS -->
+  <a-entity
+    position="0 1 0"
+    animation="property: rotation; to: 0 360 0; loop: true; dur: 7000">
 
-      <!-- STATIC CUBE -->
-      <a-box
-        position="-2 0.5 -2"
-        width="1"
-        height="1"
-        depth="1"
-        color="#4CC3D9">
-      </a-box>
+    <a-sphere
+      position="3 0 0"
+      radius="0.25"
+      color="#EED6A3">
+    </a-sphere>
 
-    </a-scene>
-  </body>
-</html>
+  </a-entity>
+
+  <!-- EARTH -->
+  <a-entity
+    position="0 1 0"
+    animation="property: rotation; to: 0 360 0; loop: true; dur: 10000">
+
+    <a-sphere
+      position="4 0 0"
+      radius="0.28"
+      color="#2E86C1">
+    </a-sphere>
+
+  </a-entity>
+
+  <!-- MARS -->
+  <a-entity
+    position="0 1 0"
+    animation="property: rotation; to: 0 360 0; loop: true; dur: 14000">
+
+    <a-sphere
+      position="5 0 0"
+      radius="0.22"
+      color="#C1440E">
+    </a-sphere>
+
+  </a-entity>
+
+  <!-- JUPITER -->
+  <a-entity
+    position="0 1 0"
+    animation="property: rotation; to: 0 360 0; loop: true; dur: 20000">
+
+    <a-sphere
+      position="6.5 0 0"
+      radius="0.6"
+      color="#D2B48C">
+    </a-sphere>
+
+  </a-entity>
+
+  <!-- SATURN -->
+  <a-entity
+    position="0 1 0"
+    animation="property: rotation; to: 0 360 0; loop: true; dur: 26000">
+
+    <a-sphere
+      position="8 0 0"
+      radius="0.5"
+      color="#F5DEB3">
+    </a-sphere>
+
+  </a-entity>
+
+  <!-- URANUS -->
+  <a-entity
+    position="0 1 0"
+    animation="property: rotation; to: 0 360 0; loop: true; dur: 32000">
+
+    <a-sphere
+      position="9.5 0 0"
+      radius="0.4"
+      color="#7FDBFF">
+    </a-sphere>
+
+  </a-entity>
+
+  <!-- NEPTUNE -->
+  <a-entity
+    position="0 1 0"
+    animation="property: rotation; to: 0 360 0; loop: true; dur: 38000">
+
+    <a-sphere
+      position="11 0 0"
+      radius="0.4"
+      color="#4169E1">
+    </a-sphere>
+
+  </a-entity>
+
+</a-scene>
